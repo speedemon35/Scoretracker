@@ -2,23 +2,16 @@ package com.example.android.scoretracker;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
-
 public class MainActivity extends AppCompatActivity {
-
-    int scoreTeamA = 0;
-    int scoreTeamB = 0;
-
 
     static final String SCORE_A_ID = "scoreTeamA";
     static final String SCORE_B_ID = "scoreTeamB";
-
+    int scoreTeamA;
+    int scoreTeamB;
 
     //saving data on orientation change
     //huge thanks to Dagger for this bit
@@ -52,29 +45,6 @@ public class MainActivity extends AppCompatActivity {
 
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     /**
@@ -113,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         EditText teamNameB = findViewById(R.id.team_b_name);
         teamNameB.setText("");
     }
+
     /**
      * Displays the given score for Team A.
      */
@@ -120,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
         EditText teamNameA = findViewById(R.id.team_a_name);
-        String teamA= teamNameA.getText().toString();
+        String teamA = teamNameA.getText().toString();
     }
 
     /**
@@ -155,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
         EditText teamNameB = findViewById(R.id.team_b_name);
-        String teamB= teamNameB.getText().toString();
+        String teamB = teamNameB.getText().toString();
     }
 
 }

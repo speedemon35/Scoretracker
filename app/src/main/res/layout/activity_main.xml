@@ -15,14 +15,15 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/team_a_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/team_a_name"
-                android:hint="@string/team_a"
                 android:gravity="center"
-                android:padding="16dp"
+                android:hint="@string/team_a"
                 android:imeOptions="actionDone"
-                android:singleLine="true"/>
+                android:inputType="text"
+                android:padding="16dp"
+                android:singleLine="true" />
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -30,7 +31,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingBottom="24dp"
-                android:text="@string/_0" />
+                android:text="@string/_0"
+                android:textSize="@dimen/large_text" />
 
             <Button
                 android:layout_width="match_parent"
@@ -74,14 +76,15 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/team_b_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/team_b_name"
-                android:hint="@string/team_b"
                 android:gravity="center"
-                android:padding="16dp"
+                android:hint="@string/team_b"
                 android:imeOptions="actionDone"
-                android:singleLine="true"/>
+                android:inputType="text"
+                android:padding="16dp"
+                android:singleLine="true" />
 
             <TextView
                 android:id="@+id/team_b_score"
@@ -89,7 +92,8 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingBottom="24dp"
-                android:text="@string/_0" />
+                android:text="@string/_0"
+                android:textSize="@dimen/large_text" />
 
             <Button
                 android:layout_width="match_parent"
